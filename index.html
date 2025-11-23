@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kebeli Melo — Pentest Web & Mobile | AppSec</title>
+  <meta name="description" content="Kebeli Melo — Pentest Web, Pentest Mobile e AppSec. Portfólio com relatórios, ferramentas e PoCs." />
+  <style>
+    :root{
+      --bg:#0d1117;
+      --card:#0f1720;
+      --muted:#8b949e;
+      --accent:#58a6ff;
+      --text:#c9d1d9;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --maxw:980px;
+      --mono: "Segoe UI Mono", "Courier New", monospace;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#071019 60%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:36px auto;
+      padding:28px;
+    }
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      background:linear-gradient(90deg, rgba(13,17,23,0.7), rgba(13,17,23,0.5));
+      padding:28px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    }
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--glass),rgba(255,255,255,0.02));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:var(--mono);
+      font-weight:700;
+      color:var(--muted);
+      font-size:20px;
+      border:1px solid rgba(255,255,255,0.03);
+      flex:0 0 96px;
+    }
+    .intro h1{
+      margin:0 0 6px 0;
+      font-size:22px;
+    }
+    .headline{
+      color:var(--accent);
+      font-weight:600;
+      font-size:13px;
+      margin-bottom:6px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:14px;
+      margin:0;
+    }
+
+    main{margin-top:22px; display:grid; gap:22px; grid-template-columns: 1fr; }
+
+    section.card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    h2{
+      margin:0 0 12px 0;
+      font-size:16px;
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .skills ul, .projects .project-list{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+    .skills li{
+      background:rgba(255,255,255,0.02);
+      padding:8px 10px;
+      border-radius:8px;
+      color:var(--muted);
+      font-size:13px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    .project {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      padding:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .project h3{margin:0;font-size:15px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .links{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn {
+      display:inline-block;
+      padding:8px 12px;
+      background:transparent;
+      color:var(--accent);
+      border:1px solid rgba(88,166,255,0.12);
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:13px;
+    }
+    .meta{
+      display:flex;
+      gap:12px;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* small */
+    @media (max-width:640px){
+      .wrap{padding:16px;margin:18px}
+      header{flex-direction:row;gap:12px;padding:18px}
+      .avatar{width:72px;height:72px;flex:0 0 72px;font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">KM</div>
+      <div class="intro">
+        <div class="headline">AppSec • Web & Mobile Pentesting • DevSecOps (entrada rápida)</div>
+        <h1>Kebeli Melo</h1>
+        <p class="sub">Desenvolvedor C# → Pentester Júnior (foco em Pentest Web e Mobile). OWASP Top 10 • Burp • Frida • MobSF</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- SOBRE -->
+      <section class="card about">
+        <h2>Sobre</h2>
+        <p style="color:var(--muted);margin-top:8px">
+          Sou profissional com background em desenvolvimento (C#, JavaScript, HTML/CSS) focado em
+          <strong>Pentest Web</strong>, <strong>Pentest Mobile</strong> e <strong>AppSec</strong>.
+          Gosto de investigar, explorar sistemas e produzir provas de conceito e relatórios técnicos.
+        </p>
+        <div class="meta" aria-hidden="true">
+          <div>Objetivo: Entrar rapidamente no mercado como Pentester Júnior / AppSec Analyst</div>
+          <div>Local: Brasil</div>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section class="card skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Habilidades Técnicas</h2>
+        <ul>
+          <li>Pentest Web (OWASP Top 10)</li>
+          <li>Pentest Mobile (Android)</li>
+          <li>Burp Suite • ZAP • Nmap</li>
+          <li>Frida • MobSF • APKTool • Jadx</li>
+          <li>SAST / DAST / SCA</li>
+          <li>Dev: C# • JavaScript • HTML • CSS • Python</li>
+          <li>APIs • JWT • Auth Bypass • IDOR</li>
+        </ul>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="card projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projetos (portfólio)</h2>
+
+        <div class="project-list">
+          <article class="project">
+            <h3>Pentest Web — OWASP Juice Shop</h3>
+            <p>Relatório com XSS, SQLi, IDOR, CSRF e RCE. Contém PoCs, screenshots e recomendações.</p>
+            <div class="links">
+              <!-- Substitua # pelos links reais -->
+              <a class="btn" href="#" target="_blank" rel="noopener">Baixar PDF</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Repositório GitHub</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Pentest API — Exploração de Endpoints</h3>
+            <p>Exploits de Auth bypass, rate limit bypass e IDOR em APIs REST. PoC em script.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Ver relatório</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Código PoC</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Pentest Mobile — InsecureBankv2</h3>
+            <p>Reverse APK, SSL Pinning bypass, armazenamento inseguro e exploração da API do app.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Baixar relatório</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">PoC / Scripts</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Ferramenta em C# — Directory Bruteforcer</h3>
+            <p>Ferramenta simples para enumerar diretórios e endpoints com logging e retries.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Script Python — Scanner de Headers e Segurança HTTP</h3>
+            <p>Script que identifica headers inseguros, CSP ausente, HSTS e problemas de CORS.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ARTIGOS / BLOG -->
+      <section class="card blog" aria-labelledby="blog-title">
+        <h2 id="blog-title">Artigos & PoCs</h2>
+        <p style="color:var(--muted)">Sugestão: publique posts curtos explicando cada PoC — por exemplo: "Explorando IDOR em API X" ou "Bypass de SSL Pinning em InsecureBankv2". Isso aumenta 10x suas chances em entrevistas.</p>
+        <div style="margin-top:10px">
+          <a class="btn" href="#" target="_blank" rel="noopener">Ver blog / artigos (placeholder)</a>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="card contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contato</h2>
+        <p style="color:var(--muted);margin-bottom:8px">
+          Email: <strong>seuemail@exemplo.com</strong> <!-- substitua -->
+        </p>
+        <div class="meta">
+          <a class="btn" href="https://github.com/seuuser" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/seuuser" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">Currículo (PDF)</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>Portfólio: Kebeli Melo — Pentest Web & Mobile • AppSec</div>
+      <div style="margin-top:6px;color:var(--muted);font-size:12px">Dicas: substitua todos os links com seus repositórios e PDFs. Mantenha relatórios em PDF e publique código no GitHub.</div>
+    </footer>
+  </div>
+</body>
+</html>
