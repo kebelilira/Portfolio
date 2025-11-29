@@ -1,271 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kebeli Melo — Pentest Web & Mobile | AppSec</title>
-  <meta name="description" content="Kebeli Melo — Pentest Web, Pentest Mobile e AppSec. Portfólio com relatórios, ferramentas e PoCs." />
-  <style>
-    :root{
-      --bg:#0d1117;
-      --card:#0f1720;
-      --muted:#8b949e;
-      --accent:#58a6ff;
-      --text:#c9d1d9;
-      --glass: rgba(255,255,255,0.03);
-      --radius:12px;
-      --maxw:980px;
-      --mono: "Segoe UI Mono", "Courier New", monospace;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,var(--bg),#071019 60%);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-    }
-    .wrap{
-      max-width:var(--maxw);
-      margin:36px auto;
-      padding:28px;
-    }
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      background:linear-gradient(90deg, rgba(13,17,23,0.7), rgba(13,17,23,0.5));
-      padding:28px;
-      border-radius:var(--radius);
-      border:1px solid rgba(255,255,255,0.03);
-      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
-    }
-    .avatar{
-      width:96px;
-      height:96px;
-      border-radius:14px;
-      background:linear-gradient(135deg,var(--glass),rgba(255,255,255,0.02));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-family:var(--mono);
-      font-weight:700;
-      color:var(--muted);
-      font-size:20px;
-      border:1px solid rgba(255,255,255,0.03);
-      flex:0 0 96px;
-    }
-    .intro h1{
-      margin:0 0 6px 0;
-      font-size:22px;
-    }
-    .headline{
-      color:var(--accent);
-      font-weight:600;
-      font-size:13px;
-      margin-bottom:6px;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:14px;
-      margin:0;
-    }
-
-    main{margin-top:22px; display:grid; gap:22px; grid-template-columns: 1fr; }
-
-    section.card{
-      background:var(--card);
-      border-radius:12px;
-      padding:18px;
-      border:1px solid rgba(255,255,255,0.03);
-    }
-    h2{
-      margin:0 0 12px 0;
-      font-size:16px;
-      color:var(--text);
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .skills ul, .projects .project-list{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
-    .skills li{
-      background:rgba(255,255,255,0.02);
-      padding:8px 10px;
-      border-radius:8px;
-      color:var(--muted);
-      font-size:13px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-
-    .project {
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      padding:12px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .project h3{margin:0;font-size:15px}
-    .project p{margin:0;color:var(--muted);font-size:14px}
-    .project .links{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn {
-      display:inline-block;
-      padding:8px 12px;
-      background:transparent;
-      color:var(--accent);
-      border:1px solid rgba(88,166,255,0.12);
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:13px;
-    }
-    .meta{
-      display:flex;
-      gap:12px;
-      color:var(--muted);
-      font-size:13px;
-      margin-top:8px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    footer{
-      margin-top:18px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* small */
-    @media (max-width:640px){
-      .wrap{padding:16px;margin:18px}
-      header{flex-direction:row;gap:12px;padding:18px}
-      .avatar{width:72px;height:72px;flex:0 0 72px;font-size:16px}
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Plano de Portfólio Blue Team | Kebeli Rodrigues</title>
+    <meta name="description" content="Plano de Portfólio de Cibersegurança (Blue Team/SOC) focado em DevSecOps, alinhado à experiência de Kebeli Rodrigues." />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="avatar" aria-hidden="true">KM</div>
-      <div class="intro">
-        <div class="headline">AppSec • Web & Mobile Pentesting • DevSecOps (entrada rápida)</div>
-        <h1>Kebeli Melo</h1>
-        <p class="sub">Desenvolvedor C# → Pentester Júnior (foco em Pentest Web e Mobile). OWASP Top 10 • Burp • Frida • MobSF</p>
-      </div>
-    </header>
-
-    <main>
-      <!-- SOBRE -->
-      <section class="card about">
-        <h2>Sobre</h2>
-        <p style="color:var(--muted);margin-top:8px">
-          Sou profissional com background em desenvolvimento (C#, JavaScript, HTML/CSS) focado em
-          <strong>Pentest Web</strong>, <strong>Pentest Mobile</strong> e <strong>AppSec</strong>.
-          Gosto de investigar, explorar sistemas e produzir provas de conceito e relatórios técnicos.
-        </p>
-        <div class="meta" aria-hidden="true">
-          <div>Objetivo: Entrar rapidamente no mercado como Pentester Júnior / AppSec Analyst</div>
-          <div>Local: Brasil</div>
-        </div>
-      </section>
-
-      <!-- HABILIDADES -->
-      <section class="card skills" aria-labelledby="skills-title">
-        <h2 id="skills-title">Habilidades Técnicas</h2>
-        <ul>
-          <li>Pentest Web (OWASP Top 10)</li>
-          <li>Pentest Mobile (Android)</li>
-          <li>Burp Suite • ZAP • Nmap</li>
-          <li>Frida • MobSF • APKTool • Jadx</li>
-          <li>SAST / DAST / SCA</li>
-          <li>Dev: C# • JavaScript • HTML • CSS • Python</li>
-          <li>APIs • JWT • Auth Bypass • IDOR</li>
-        </ul>
-      </section>
-
-      <!-- PROJETOS -->
-      <section class="card projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projetos (portfólio)</h2>
-
-        <div class="project-list">
-          <article class="project">
-            <h3>Pentest Web — OWASP Juice Shop</h3>
-            <p>Relatório com XSS, SQLi, IDOR, CSRF e RCE. Contém PoCs, screenshots e recomendações.</p>
-            <div class="links">
-              <!-- Substitua # pelos links reais -->
-              <a class="btn" href="#" target="_blank" rel="noopener">Baixar PDF</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">Repositório GitHub</a>
+    <div class="wrap">
+        <header>
+            <div class="avatar" aria-hidden="true">KR</div>
+            <div class="intro">
+                <div class="headline">Plano de Portfólio Blue Team / SOC com Foco em DevSecOps</div>
+                <h1>Kebeli Rodrigues</h1>
+                <p class="sub">Capitalizando experiência em Desenvolvimento, SQL, Cloud/DevOps para a Cibersegurança.</p>
             </div>
-          </article>
+        </header>
 
-          <article class="project">
-            <h3>Pentest API — Exploração de Endpoints</h3>
-            <p>Exploits de Auth bypass, rate limit bypass e IDOR em APIs REST. PoC em script.</p>
-            <div class="links">
-              <a class="btn" href="#" target="_blank" rel="noopener">Ver relatório</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">Código PoC</a>
-            </div>
-          </article>
+        <main>
+            <h1>Plano de Portfólio de Cibersegurança (Blue Team/SOC)</h1>
+<p>Prezada Kebeli Rodrigues,</p>
+<p>Com base na sua escolha pela área de <strong>Defesa e Operações de Segurança (Blue Team/SOC)</strong> e na análise do seu currículo, que demonstra uma sólida base em <strong>Desenvolvimento (Python, ASP.NET, SQL)</strong>, <strong>Administração de Sistemas (Linux/Windows)</strong> e <strong>Cloud/DevOps (AWS, Docker)</strong>, estruturamos um portfólio de três projetos.</p>
+<p>Este portfólio foi desenhado para destacar um perfil de <strong>Analista de SOC/Blue Team com mentalidade DevSecOps</strong>, uma combinação de habilidades extremamente valiosa no mercado atual.</p>
+<h2>Visão Geral dos Projetos</h2>
+<p>Os projetos a seguir utilizam suas habilidades existentes para criar um diferencial competitivo, mostrando que você não apenas detecta problemas, mas também entende a fundo como os sistemas e códigos funcionam.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Projeto</th>
+<th style="text-align: left;">Foco Principal</th>
+<th style="text-align: left;">Habilidades Chave Demonstradas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. SIEM Case Study: Log Analysis com ELK/Splunk e SQL/Python</strong></td>
+<td style="text-align: left;">Coleta, normalização e análise avançada de logs.</td>
+<td style="text-align: left;"><strong>SQL</strong>, <strong>Python</strong>, Linux, Análise de Dados, SIEM (Elastic Stack ou Splunk Free).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Análise de Tráfego e Detecção de Ataque Web</strong></td>
+<td style="text-align: left;">Análise de tráfego de rede (Wireshark) e detecção de ataques em aplicações.</td>
+<td style="text-align: left;">Redes (Protocolos), Análise Forense de Rede, <strong>ASP.NET/Desenvolvimento</strong>, Detecção de Vulnerabilidades.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Playbook de Resposta a Incidentes em Ambiente Cloud/Docker</strong></td>
+<td style="text-align: left;">Criação de procedimentos de Resposta a Incidentes (IR) específicos para ambientes modernos.</td>
+<td style="text-align: left;"><strong>AWS</strong>, <strong>Docker</strong>, Resposta a Incidentes, Documentação Técnica, Administração de Sistemas.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Detalhamento dos Projetos</h2>
+<h3>Projeto 1: SIEM Case Study: Log Analysis com ELK/Splunk e SQL/Python</h3>
+<p>Este projeto utiliza sua experiência em <strong>SQL</strong> e <strong>BI</strong> para demonstrar que você pode ir além da simples leitura de alertas, realizando análises de dados profundas em logs de segurança.</p>
+<p><strong>Objetivo:</strong> Montar um ambiente de laboratório (em VM Linux ou Docker) com um SIEM (Elastic Stack ou Splunk Free) para simular a ingestão de logs e realizar uma correlação avançada.</p>
+<p><strong>Passos Chave:</strong>
+1.  <strong>Setup:</strong> Instalar e configurar o Elastic Stack (ELK) ou Splunk Free.
+2.  <strong>Ingestão de Logs:</strong> Ingerir logs de acesso (ex: Apache/Nginx) e logs de autenticação (ex: logs de SSH).
+3.  <strong>Análise Avançada (O Diferencial):</strong>
+    *   Usar um script <strong>Python/Pandas</strong> ou consultas <strong>SQL (PostgreSQL)</strong> para realizar uma <strong>correlação complexa</strong> (ex: "Encontrar todos os IPs que falharam 5 vezes no login e, em seguida, acessaram uma página de administração com sucesso em menos de 10 minutos").
+    *   Criar um dashboard no Kibana (ou ferramenta de BI) para visualizar o resultado dessa correlação.
+4.  <strong>Documentação:</strong> Documentar o processo, o script Python/SQL usado e a conclusão da análise no GitHub.</p>
+<h3>Projeto 2: Análise de Tráfego e Detecção de Ataque Web</h3>
+<p>Este projeto aproveita seu conhecimento em <strong>ASP.NET</strong> e desenvolvimento para demonstrar que você entende como os ataques web funcionam no nível do protocolo.</p>
+<p><strong>Objetivo:</strong> Simular um ataque comum a aplicações web (ex: SQL Injection ou XSS) em um ambiente de laboratório e usar o Wireshark para capturar e analisar o tráfego.</p>
+<p><strong>Passos Chave:</strong>
+1.  <strong>Laboratório:</strong> Configurar uma aplicação web vulnerável (ex: OWASP Juice Shop ou uma aplicação simples em ASP.NET que você mesmo crie).
+2.  <strong>Captura:</strong> Usar o <strong>Wireshark</strong> para capturar o tráfego de rede durante a execução de um ataque simples (ex: <code>1' OR '1'='1</code> em um campo de login).
+3.  <strong>Análise Forense:</strong> Analisar o <em>packet capture</em> (PCAP) no Wireshark, identificando o pacote HTTP que contém o <em>payload</em> malicioso.
+4.  <strong>Documentação (Ponte DevSecOps):</strong>
+    *   Explicar a detecção do ponto de vista do <strong>Analista de SOC</strong> (como a assinatura do ataque aparece no tráfego de rede).
+    *   Explicar a causa raiz do ponto de vista do <strong>Desenvolvedor</strong> (por que o código ASP.NET falhou e como corrigi-lo usando <em>Prepared Statements</em>).</p>
+<h3>Projeto 3: Playbook de Resposta a Incidentes em Ambiente Cloud/Docker</h3>
+<p>Este projeto utiliza sua experiência em <strong>AWS</strong> e <strong>Docker</strong> para focar em um nicho de alto valor: a segurança de ambientes em nuvem e conteinerizados.</p>
+<p><strong>Objetivo:</strong> Criar um <strong>Playbook de Resposta a Incidentes</strong> (IR Playbook) detalhado para um cenário específico, como "Comprometimento de um Container Docker em um ambiente AWS ECS/EKS".</p>
+<p><strong>Passos Chave:</strong>
+1.  <strong>Cenário:</strong> Definir um cenário de incidente (ex: um container Docker foi comprometido e está minerando criptomoedas).
+2.  <strong>Playbook (Estrutura NIST/SANS):</strong> Criar um documento formal com os passos de IR, divididos em fases (Preparação, Identificação, Contenção, Erradicação, Recuperação, Lições Aprendidas).
+3.  <strong>Foco Cloud/Docker (O Diferencial):</strong> Detalhar os passos específicos para o ambiente:
+    *   <strong>Contenção:</strong> Como isolar o container ou o nó do cluster (ex: <code>docker stop</code>, atualizar a política de segurança do Security Group da AWS).
+    *   <strong>Análise Forense:</strong> Descrever os comandos exatos para obter uma imagem forense do container em execução (<code>docker commit</code>) e como usar logs da AWS (CloudTrail, VPC Flow Logs) para análise.
+4.  <strong>Documentação:</strong> O Playbook final deve ser claro, conciso e técnico, demonstrando seu conhecimento em arquitetura de nuvem e procedimentos de segurança.</p>
+<hr />
+<p>Este plano de portfólio é um excelente ponto de partida para sua transição de carreira para o Blue Team/SOC, capitalizando em suas habilidades de desenvolvimento e infraestrutura.</p>
+<p>O arquivo <code>plano_portfolio_final.md</code> está anexado para sua referência. Se precisar de mais detalhes sobre a execução de qualquer um desses projetos, por favor, me avise!</p>
+        </main>
 
-          <article class="project">
-            <h3>Pentest Mobile — InsecureBankv2</h3>
-            <p>Reverse APK, SSL Pinning bypass, armazenamento inseguro e exploração da API do app.</p>
-            <div class="links">
-              <a class="btn" href="#" target="_blank" rel="noopener">Baixar relatório</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">PoC / Scripts</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <h3>Ferramenta em C# — Directory Bruteforcer</h3>
-            <p>Ferramenta simples para enumerar diretórios e endpoints com logging e retries.</p>
-            <div class="links">
-              <a class="btn" href="#" target="_blank" rel="noopener">Ver no GitHub</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <h3>Script Python — Scanner de Headers e Segurança HTTP</h3>
-            <p>Script que identifica headers inseguros, CSP ausente, HSTS e problemas de CORS.</p>
-            <div class="links">
-              <a class="btn" href="#" target="_blank" rel="noopener">Ver no GitHub</a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ARTIGOS / BLOG -->
-      <section class="card blog" aria-labelledby="blog-title">
-        <h2 id="blog-title">Artigos & PoCs</h2>
-        <p style="color:var(--muted)">Sugestão: publique posts curtos explicando cada PoC — por exemplo: "Explorando IDOR em API X" ou "Bypass de SSL Pinning em InsecureBankv2". Isso aumenta 10x suas chances em entrevistas.</p>
-        <div style="margin-top:10px">
-          <a class="btn" href="#" target="_blank" rel="noopener">Ver blog / artigos (placeholder)</a>
-        </div>
-      </section>
-
-      <!-- CONTATO -->
-      <section class="card contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contato</h2>
-        <p style="color:var(--muted);margin-bottom:8px">
-          Email: <strong>seuemail@exemplo.com</strong> <!-- substitua -->
-        </p>
-        <div class="meta">
-          <a class="btn" href="https://github.com/seuuser" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://linkedin.com/in/seuuser" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Currículo (PDF)</a>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>Portfólio: Kebeli Melo — Pentest Web & Mobile • AppSec</div>
-      <div style="margin-top:6px;color:var(--muted);font-size:12px">Dicas: substitua todos os links com seus repositórios e PDFs. Mantenha relatórios em PDF e publique código no GitHub.</div>
-    </footer>
-  </div>
+        <footer>
+            <div>Plano de Portfólio Gerado por Manus AI</div>
+            <div style="margin-top:6px;color:var(--muted);font-size:12px">Lembre-se de substituir o conteúdo do cabeçalho e do rodapé com suas informações de contato e links reais.</div>
+        </footer>
+    </div>
 </body>
 </html>
