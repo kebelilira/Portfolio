@@ -8,18 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Tema"></button>
     <div class="wrap">
+        <div class="nav-container">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Alternar Menu">&#9776;</button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#visao-geral">Visão Geral</a></li>
+                <li><a href="#projeto-1">Projeto 1</a></li>
+                <li><a href="#projeto-2">Projeto 2</a></li>
+                <li><a href="#projeto-3">Projeto 3</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
         <header>
             <div class="avatar" aria-hidden="true">KR</div>
             <div class="intro">
                 <div class="headline">Plano de Portfólio Blue Team / SOC com Foco em DevSecOps</div>
-                <h1>Kebeli Rodrigues</h1>
+                <h1 id="typing-title"></h1>
                 <p class="sub">Capitalizando experiência em Desenvolvimento, SQL, Cloud/DevOps para a Cibersegurança.</p>
             </div>
         </header>
 
         <main>
-            <h1>Plano de Portfólio de Cibersegurança (Blue Team/SOC)</h1>
+            <h1 id="visao-geral">Plano de Portfólio de Cibersegurança (Blue Team/SOC)</h1>
 <p>Prezada Kebeli Rodrigues,</p>
 <p>Com base na sua escolha pela área de <strong>Defesa e Operações de Segurança (Blue Team/SOC)</strong> e na análise do seu currículo, que demonstra uma sólida base em <strong>Desenvolvimento (Python, ASP.NET, SQL)</strong>, <strong>Administração de Sistemas (Linux/Windows)</strong> e <strong>Cloud/DevOps (AWS, Docker)</strong>, estruturamos um portfólio de três projetos.</p>
 <p>Este portfólio foi desenhado para destacar um perfil de <strong>Analista de SOC/Blue Team com mentalidade DevSecOps</strong>, uma combinação de habilidades extremamente valiosa no mercado atual.</p>
@@ -53,7 +64,7 @@
 </table>
 <hr />
 <h2>Detalhamento dos Projetos</h2>
-<h3>Projeto 1: SIEM Case Study: Log Analysis com ELK/Splunk e SQL/Python</h3>
+<h3 id="projeto-1">Projeto 1: SIEM Case Study: Log Analysis com ELK/Splunk e SQL/Python</h3>
 <p>Este projeto utiliza sua experiência em <strong>SQL</strong> e <strong>BI</strong> para demonstrar que você pode ir além da simples leitura de alertas, realizando análises de dados profundas em logs de segurança.</p>
 <p><strong>Objetivo:</strong> Montar um ambiente de laboratório (em VM Linux ou Docker) com um SIEM (Elastic Stack ou Splunk Free) para simular a ingestão de logs e realizar uma correlação avançada.</p>
 <p><strong>Passos Chave:</strong>
@@ -63,7 +74,7 @@
     *   Usar um script <strong>Python/Pandas</strong> ou consultas <strong>SQL (PostgreSQL)</strong> para realizar uma <strong>correlação complexa</strong> (ex: "Encontrar todos os IPs que falharam 5 vezes no login e, em seguida, acessaram uma página de administração com sucesso em menos de 10 minutos").
     *   Criar um dashboard no Kibana (ou ferramenta de BI) para visualizar o resultado dessa correlação.
 4.  <strong>Documentação:</strong> Documentar o processo, o script Python/SQL usado e a conclusão da análise no GitHub.</p>
-<h3>Projeto 2: Análise de Tráfego e Detecção de Ataque Web</h3>
+<h3 id="projeto-2">Projeto 2: Análise de Tráfego e Detecção de Ataque Web</h3>
 <p>Este projeto aproveita seu conhecimento em <strong>ASP.NET</strong> e desenvolvimento para demonstrar que você entende como os ataques web funcionam no nível do protocolo.</p>
 <p><strong>Objetivo:</strong> Simular um ataque comum a aplicações web (ex: SQL Injection ou XSS) em um ambiente de laboratório e usar o Wireshark para capturar e analisar o tráfego.</p>
 <p><strong>Passos Chave:</strong>
@@ -73,7 +84,7 @@
 4.  <strong>Documentação (Ponte DevSecOps):</strong>
     *   Explicar a detecção do ponto de vista do <strong>Analista de SOC</strong> (como a assinatura do ataque aparece no tráfego de rede).
     *   Explicar a causa raiz do ponto de vista do <strong>Desenvolvedor</strong> (por que o código ASP.NET falhou e como corrigi-lo usando <em>Prepared Statements</em>).</p>
-<h3>Projeto 3: Playbook de Resposta a Incidentes em Ambiente Cloud/Docker</h3>
+<h3 id="projeto-3">Projeto 3: Playbook de Resposta a Incidentes em Ambiente Cloud/Docker</h3>},{find:
 <p>Este projeto utiliza sua experiência em <strong>AWS</strong> e <strong>Docker</strong> para focar em um nicho de alto valor: a segurança de ambientes em nuvem e conteinerizados.</p>
 <p><strong>Objetivo:</strong> Criar um <strong>Playbook de Resposta a Incidentes</strong> (IR Playbook) detalhado para um cenário específico, como "Comprometimento de um Container Docker em um ambiente AWS ECS/EKS".</p>
 <p><strong>Passos Chave:</strong>
@@ -93,5 +104,6 @@
             <div style="margin-top:6px;color:var(--muted);font-size:12px">Lembre-se de substituir o conteúdo do cabeçalho e do rodapé com suas informações de contato e links reais.</div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

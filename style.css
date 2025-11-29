@@ -1,4 +1,6 @@
 :root{
+    /* Transição suave para o tema */
+    transition: background-color 0.3s, color 0.3s;
     --bg:#0d1117;
     --card:#0f1720;
     --muted:#8b949e;
@@ -9,6 +11,158 @@
     --maxw:980px;
     --mono: "Segoe UI Mono", "Courier New", monospace;
 }
+
+/* Variáveis para o Tema Claro */
+:root.light-theme {
+    --bg: #f0f2f5;
+    --card: #ffffff;
+    --muted: #6a737d;
+    --accent: #0366d6;
+    --text: #24292e;
+    --glass: rgba(0,0,0,0.05);
+}
+
+/* Ajustes de estilo para o tema claro */
+:root.light-theme body {
+    background: linear-gradient(180deg, var(--bg), #e0e2e5 60%);
+    color: var(--text);
+}
+
+:root.light-theme header {
+    background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+:root.light-theme .avatar {
+    background: linear-gradient(135deg, var(--glass), rgba(0,0,0,0.02));
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+:root.light-theme main {
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+:root.light-theme h1, :root.light-theme h2, :root.light-theme h3 {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+:root.light-theme th, :root.light-theme td {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+:root.light-theme th {
+    background-color: rgba(0,0,0,0.05);
+    color: var(--accent);
+}
+
+:root.light-theme tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.02);
+}
+
+:root.light-theme strong {
+    color: var(--accent);
+}
+
+/* Botão de Alternância */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--muted);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para o Menu de Navegação */
+.nav-menu {
+    display: none; /* Escondido por padrão */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.03);
+    margin-top: 10px;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 12px 18px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Botão Hambúrguer */
+.menu-toggle {
+    display: none; /* Escondido em desktop */
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--muted);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Tema Claro para o Menu */
+:root.light-theme .nav-menu {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+:root.light-theme .nav-menu li a:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+:root.light-theme .menu-toggle {
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width:640px){
+    .menu-toggle {
+        display: flex; /* Visível em mobile */
+    }
+    .nav-menu {
+        position: absolute;
+        top: 70px; /* Abaixo do header/botões */
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 10px auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .wrap{padding:16px;margin:18px}
 *{box-sizing:border-box}
 body{
     margin:0;
@@ -120,4 +274,4 @@ footer{
     header{flex-direction:column;gap:12px;padding:18px; text-align:center;}
     .avatar{width:72px;height:72px;flex:0 0 72px;font-size:16px}
     main{padding:18px;}
-}
+}}
