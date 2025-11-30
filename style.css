@@ -1,11 +1,11 @@
 :root{
     /* Transição suave para o tema */
     transition: background-color 0.3s, color 0.3s;
-    --bg:#0d1117;
-    --card:#0f1720;
+    --bg:#0a0d14; /* Fundo mais escuro */
+    --card:#11151e; /* Cartão ligeiramente mais claro */
     --muted:#8b949e;
-    --accent:#58a6ff;
-    --text:#c9d1d9;
+    --accent:#00bfff; /* Ciano/Azul mais vibrante para destaque */
+    --text:#e6edf3; /* Texto mais claro */
     --glass: rgba(255,255,255,0.03);
     --radius:12px;
     --maxw:980px;
@@ -17,7 +17,7 @@
     --bg: #f0f2f5;
     --card: #ffffff;
     --muted: #6a737d;
-    --accent: #0366d6;
+    --accent: #00bfff; /* Mantém o ciano vibrante */
     --text: #24292e;
     --glass: rgba(0,0,0,0.05);
 }
@@ -32,6 +32,15 @@
     background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
     border: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+:root.light-theme h1, :root.light-theme h2, :root.light-theme h3 {
+    border-bottom: 2px solid var(--accent);
+}
+
+:root.light-theme th {
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 :root.light-theme .avatar {
@@ -81,7 +90,7 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.2), 0 2px 5px rgba(0,0,0,0.4);
     z-index: 1000;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -186,7 +195,7 @@ header{
     padding:28px;
     border-radius:var(--radius);
     border:1px solid rgba(255,255,255,0.03);
-    box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.1), 0 6px 18px rgba(2,6,23,0.8); /* Adiciona um sutil glow azul */
 }
 .avatar{
     width:96px;
@@ -226,7 +235,7 @@ main{
     border:1px solid rgba(255,255,255,0.03);
 }
 h1, h2, h3 {
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 2px solid var(--accent); /* Linha mais grossa e colorida */
     padding-bottom: 0.3em;
     margin-top: 1.5em;
 }
@@ -254,8 +263,9 @@ th, td {
 }
 th {
     background-color: rgba(255,255,255,0.05);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--accent);
+    text-transform: uppercase;
 }
 tr:nth-child(even) {
     background-color: rgba(255,255,255,0.01);
